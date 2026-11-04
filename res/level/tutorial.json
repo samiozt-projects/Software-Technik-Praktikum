@@ -1,0 +1,51 @@
+{
+  "name": "Tutorial",
+  "number": 0,
+  "adhesionCoefficientModifier": 1.0,
+  "weatherCondition": "dry",
+  "vehicleTypes": [
+    {
+      "name": "Auto",
+      "maxSpeed": 60.0,
+      "length": 4.0,
+      "adhesionCoefficient": 0.7,
+      "acceleration": 3.0,
+      "graphicRef": "images/car.png"
+    }
+  ],
+  "colors": [
+    {
+      "name": "Rot",
+      "argb": 4294901760
+    }
+  ],
+  "nodes": [
+    {
+      "id": "tutorial-source",
+      "type": "SourceNode",
+      "x": 31.25,
+      "y": 70.0,
+      "elevation": 0,
+      "orientationDegrees": 90.0,
+      "configurations": [
+        {
+          "colorName": "Rot",
+          "vehicleTypeName": "Auto",
+          "generationSpeed": 2.0,
+          "initialVehicleSpeed": 30.0,
+          "vehiclesToSpawn": 5
+        }
+      ]
+    },
+    {
+      "id": "tutorial-target",
+      "type": "TargetNode",
+      "x": 193.75,
+      "y": 70.0,
+      "elevation": 0,
+      "orientationDegrees": 270.0,
+      "colorName": "Rot"
+    }
+  ],
+  "streets": []
+}

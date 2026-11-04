@@ -1,0 +1,87 @@
+{
+    "name": "Level 2",
+    "number": 2,
+    "adhesionCoefficientModifier": 1.0,
+    "weatherCondition": "wet",
+    "challengeConnectionNodeLimit": 4,
+    "vehicleTypes": [
+        {
+            "name": "Auto",
+            "maxSpeed": 80.0,
+            "length": 4.0,
+            "adhesionCoefficient": 0.7,
+            "acceleration": 3.0,
+            "graphicRef": "images/car.png"
+        },
+        {
+            "name": "Motorrad",
+            "maxSpeed": 95.0,
+            "length": 2.0,
+            "adhesionCoefficient": 0.75,
+            "acceleration": 4.0,
+            "graphicRef": "images/motorcycle.png"
+        }
+    ],
+    "colors": [
+        {
+            "name": "Rot",
+            "argb": 4294901760
+        },
+        {
+            "name": "Blau",
+            "argb": 4278190335
+        }
+    ],
+    "nodes": [
+        {
+            "type": "SourceNode",
+            "id": "node-1",
+            "x": 5.0,
+            "y": 62.5,
+            "elevation": 0,
+            "orientationDegrees": 90.0,
+            "configurations": [
+                {
+                    "colorName": "Rot",
+                    "vehicleTypeName": "Auto",
+                    "generationSpeed": 2.5,
+                    "initialVehicleSpeed": 50.0,
+                    "vehiclesToSpawn": 7
+                },
+                {
+                    "colorName": "Blau",
+                    "vehicleTypeName": "Motorrad",
+                    "generationSpeed": 3.5,
+                    "initialVehicleSpeed": 60.0,
+                    "vehiclesToSpawn": 7
+                },
+                {
+                    "colorName": "Rot",
+                    "vehicleTypeName": "Motorrad",
+                    "generationSpeed": 4.5,
+                    "initialVehicleSpeed": 55.0,
+                    "vehiclesToSpawn": 7
+                }
+            ]
+        },
+        {
+            "type": "TargetNode",
+            "id": "node-2",
+            "x": 220.0,
+            "y": 37.5,
+            "elevation": 0,
+            "orientationDegrees": 270.0,
+            "colorName": "Rot"
+        },
+        {
+            "type": "TargetNode",
+            "id": "node-3",
+            "x": 220.0,
+            "y": 87.5,
+            "elevation": 0,
+            "orientationDegrees": 270.0,
+            "colorName": "Blau"
+        }
+    ],
+    "streets": []
+}

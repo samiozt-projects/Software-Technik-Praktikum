@@ -1,0 +1,84 @@
+{
+  "name": "Beispiel-Level",
+  "number": 1,
+  "adhesionCoefficientModifier": 1.0,
+  "simulationSpeed": 1.0,
+  "weatherCondition": "dry",
+  "vehicleTypes": [
+    {
+      "name": "Car",
+      "maxSpeed": 50.0,
+      "length": 4.0,
+      "adhesionCoefficient": 0.8,
+      "acceleration": 3.0
+    },
+    {
+      "name": "Truck",
+      "maxSpeed": 80.0,
+      "length": 8.0,
+      "adhesionCoefficient": 0.6,
+      "acceleration": 1.5
+    }
+  ],
+  "colors": [
+    { "name": "Rot",  "argb": 4294901760 },
+    { "name": "Blau", "argb": 4278190335 }
+  ],
+  "nodes": [
+    {
+      "id": "node-1",
+      "type": "SourceNode",
+      "x": 100.0,
+      "y": 200.0,
+      "elevation": 0,
+      "orientationDegrees": 90.0,
+      "vehiclesGenerated": 0,
+      "configurations": [
+        {
+          "colorName": "Rot",
+          "vehicleTypeName": "Car",
+          "generationSpeed": 5.0,
+          "initialVehicleSpeed": 10.0,
+          "vehiclesToSpawn": 7
+        }
+      ]
+    },
+    {
+      "id": "node-2",
+      "type": "TargetNode",
+      "x": 500.0,
+      "y": 200.0,
+      "elevation": 0,
+      "orientationDegrees": 270.0,
+      "colorName": "Rot",
+      "vehiclesArrived": 0
+    },
+    {
+      "id": "node-3",
+      "type": "ConnectionNode",
+      "x": 300.0,
+      "y": 200.0,
+      "elevation": 0
+    }
+  ],
+  "streets": [
+    {
+      "startNodeId": "node-1",
+      "endNodeId": "node-3",
+      "path": [
+        { "x": 100.0, "y": 200.0 },
+        { "x": 200.0, "y": 200.0 },
+        { "x": 300.0, "y": 200.0 }
+      ]
+    },
+    {
+      "startNodeId": "node-3",
+      "endNodeId": "node-2",
+      "path": [
+        { "x": 300.0, "y": 200.0 },
+        { "x": 400.0, "y": 200.0 },
+        { "x": 500.0, "y": 200.0 }
+      ]
+    }
+  ]
+}

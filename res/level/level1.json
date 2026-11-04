@@ -1,0 +1,77 @@
+{
+    "name": "Level 1",
+    "number": 1,
+    "adhesionCoefficientModifier": 1.0,
+    "weatherCondition": "dry",
+    "challengeConnectionNodeLimit": 4,
+    "vehicleTypes": [
+        {
+            "name": "Auto",
+            "maxSpeed": 80.0,
+            "length": 4.0,
+            "adhesionCoefficient": 0.7,
+            "acceleration": 3.0,
+            "graphicRef": "images/car.png"
+        },
+        {
+            "name": "Lastwagen",
+            "maxSpeed": 60.0,
+            "length": 8.0,
+            "adhesionCoefficient": 0.65,
+            "acceleration": 1.8,
+            "graphicRef": "images/truck.png"
+        }
+    ],
+    "colors": [
+        {
+            "name": "Rot",
+            "argb": 4294901760
+        }
+    ],
+    "nodes": [
+        {
+            "type": "SourceNode",
+            "id": "node-1",
+            "x": 25.0,
+            "y": 42.5,
+            "elevation": 0,
+            "orientationDegrees": 120.0,
+            "configurations": [
+                {
+                    "colorName": "Rot",
+                    "vehicleTypeName": "Auto",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 55.0,
+                    "vehiclesToSpawn": 7
+                }
+            ]
+        },
+        {
+            "type": "SourceNode",
+            "id": "node-2",
+            "x": 25.0,
+            "y": 82.5,
+            "elevation": 0,
+            "orientationDegrees": 60.0,
+            "configurations": [
+                {
+                    "colorName": "Rot",
+                    "vehicleTypeName": "Lastwagen",
+                    "generationSpeed": 4.0,
+                    "initialVehicleSpeed": 20.0,
+                    "vehiclesToSpawn": 7
+                }
+            ]
+        },
+        {
+            "type": "TargetNode",
+            "id": "node-3",
+            "x": 200.0,
+            "y": 62.5,
+            "elevation": 0,
+            "orientationDegrees": 270.0,
+            "colorName": "Rot"
+        }
+    ],
+    "streets": []
+}

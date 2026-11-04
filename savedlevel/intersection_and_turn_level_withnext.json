@@ -1,0 +1,306 @@
+{
+  "name": "Intersection and Turn Level",
+  "number": 7,
+  "adhesionCoefficientModifier": 1.0,
+  "simulationSpeed": 1.0,
+  "vehicleTypes": [
+    {
+      "name": "car1",
+      "maxSpeed": 80.0,
+      "length": 4.0,
+      "adhesionCoefficient": 0.7,
+      "acceleration": 3.0,
+      "graphicRef": "images/car.png"
+    },
+    {
+      "name": "truck1",
+      "maxSpeed": 60.0,
+      "length": 8.0,
+      "adhesionCoefficient": 0.6,
+      "acceleration": 1.5,
+      "graphicRef": "images/truck.png"
+    },
+    {
+      "name": "motorcycle1",
+      "maxSpeed": 100.0,
+      "length": 2.0,
+      "adhesionCoefficient": 0.8,
+      "acceleration": 4.5,
+      "graphicRef": "images/motorcycle.png"
+    }
+  ],
+  "colors": [
+    {
+      "name": "RED",
+      "argb": 4294901760
+    },
+    {
+      "name": "BLUE",
+      "argb": 4278190335
+    }
+  ],
+  "nodes": [
+    {
+      "id": "Red-Source-Left",
+      "type": "SourceNode",
+      "x": 12.5,
+      "y": 62.5,
+      "elevation": 0,
+      "orientationDegrees": 90.0,
+      "vehiclesGenerated": 0,
+      "configurations": [
+        {
+          "colorName": "RED",
+          "vehicleTypeName": "car1",
+          "generationSpeed": 1.0,
+          "initialVehicleSpeed": 30.0,
+          "vehiclesToSpawn": 7
+        }
+      ]
+    },
+    {
+      "id": "Blue-Source-Top",
+      "type": "SourceNode",
+      "x": 90.0,
+      "y": 6.25,
+      "elevation": 0,
+      "orientationDegrees": 120.0,
+      "vehiclesGenerated": 0,
+      "configurations": [
+        {
+          "colorName": "BLUE",
+          "vehicleTypeName": "truck1",
+          "generationSpeed": 3.0,
+          "initialVehicleSpeed": 30.0,
+          "vehiclesToSpawn": 7
+        }
+      ]
+    },
+    {
+      "id": "Mixed-Source-Left",
+      "type": "SourceNode",
+      "x": 12.5,
+      "y": 18.75,
+      "elevation": 0,
+      "orientationDegrees": 90.0,
+      "vehiclesGenerated": 0,
+      "configurations": [
+        {
+          "colorName": "RED",
+          "vehicleTypeName": "motorcycle1",
+          "generationSpeed": 2.0,
+          "initialVehicleSpeed": 30.0,
+          "vehiclesToSpawn": 7
+        },
+        {
+          "colorName": "BLUE",
+          "vehicleTypeName": "truck1",
+          "generationSpeed": 3.0,
+          "initialVehicleSpeed": 25.0,
+          "vehiclesToSpawn": 7
+        }
+      ]
+    },
+    {
+      "id": "Blue-PreIntersection-MergeNode",
+      "type": "ConnectionNode",
+      "x": 112.5,
+      "y": 18.75,
+      "elevation": 0
+    },
+    {
+      "id": "Main-Intersection",
+      "type": "ConnectionNode",
+      "x": 112.5,
+      "y": 62.5,
+      "elevation": 0
+    },
+    {
+      "id": "Red-PostIntersection-MergeNode",
+      "type": "ConnectionNode",
+      "x": 162.5,
+      "y": 18.75,
+      "elevation": 0
+    },
+    {
+      "id": "Red-Target-TopRight",
+      "type": "TargetNode",
+      "x": 200.0,
+      "y": 18.75,
+      "elevation": 0,
+      "orientationDegrees": 270.0,
+      "colorName": "RED",
+      "vehiclesArrived": 0
+    },
+    {
+      "id": "Blue-Target-Bottom",
+      "type": "TargetNode",
+      "x": 112.5,
+      "y": 118.75,
+      "elevation": 0,
+      "orientationDegrees": 0.0,
+      "colorName": "BLUE",
+      "vehiclesArrived": 0
+    }
+  ],
+  "streets": [
+    {
+      "id": "Street-Red-Inlet-To-MainIntersection",
+      "type": "Straight",
+      "startNodeId": "Red-Source-Left",
+      "endNodeId": "Main-Intersection",
+      "speedLimit": 50.0,
+      "path": [
+        {
+          "x": 12.5,
+          "y": 62.5
+        },
+        {
+          "x": 112.5,
+          "y": 62.5
+        }
+      ]
+    },
+    {
+      "id": "Street-Red-SCurve-To-MergeNode",
+      "type": "Curved",
+      "startNodeId": "Main-Intersection",
+      "endNodeId": "Red-PostIntersection-MergeNode",
+      "speedLimit": 50.0,
+      "controlPoints": [
+        {
+          "x": 131.25,
+          "y": 62.5
+        },
+        {
+          "x": 137.5,
+          "y": 18.75
+        }
+      ],
+      "path": [
+        {
+          "x": 112.5,
+          "y": 62.5
+        },
+        {
+          "x": 127.5,
+          "y": 60.0
+        },
+        {
+          "x": 137.5,
+          "y": 40.625
+        },
+        {
+          "x": 147.5,
+          "y": 21.25
+        },
+        {
+          "x": 162.5,
+          "y": 18.75
+        }
+      ]
+    },
+    {
+      "id": "Street-Red-Final-To-Target",
+      "type": "Straight",
+      "startNodeId": "Red-PostIntersection-MergeNode",
+      "endNodeId": "Red-Target-TopRight",
+      "speedLimit": 60.0,
+      "path": [
+        {
+          "x": 162.5,
+          "y": 18.75
+        },
+        {
+          "x": 200.0,
+          "y": 18.75
+        }
+      ]
+    },
+    {
+      "id": "Street-MixedRed-Direct-Straight",
+      "type": "Straight",
+      "startNodeId": "Mixed-Source-Left",
+      "endNodeId": "Blue-PreIntersection-MergeNode",
+      "speedLimit": 60.0,
+      "path": [
+        {
+          "x": 12.5,
+          "y": 18.75
+        },
+        {
+          "x": 112.5,
+          "y": 18.75
+        }
+      ]
+    },
+    {
+      "id": "Street-Red-Bridge-Connecting-Targets",
+      "type": "Straight",
+      "startNodeId": "Blue-PreIntersection-MergeNode",
+      "endNodeId": "Red-PostIntersection-MergeNode",
+      "speedLimit": 60.0,
+      "path": [
+        {
+          "x": 112.5,
+          "y": 18.75
+        },
+        {
+          "x": 162.5,
+          "y": 18.75
+        }
+      ]
+    },
+    {
+      "id": "Street-Blue-TopInlet-To-PreIntersectionMerge",
+      "type": "Straight",
+      "startNodeId": "Blue-Source-Top",
+      "endNodeId": "Blue-PreIntersection-MergeNode",
+      "speedLimit": 50.0,
+      "path": [
+        {
+          "x": 90.0,
+          "y": 6.25
+        },
+        {
+          "x": 112.5,
+          "y": 18.75
+        }
+      ]
+    },
+    {
+      "id": "Street-Blue-PreIntersection-To-MainIntersection",
+      "type": "Straight",
+      "startNodeId": "Blue-PreIntersection-MergeNode",
+      "endNodeId": "Main-Intersection",
+      "speedLimit": 50.0,
+      "path": [
+        {
+          "x": 112.5,
+          "y": 18.75
+        },
+        {
+          "x": 112.5,
+          "y": 62.5
+        }
+      ]
+    },
+    {
+      "id": "Street-Blue-Outlet-To-Target",
+      "type": "Straight",
+      "startNodeId": "Main-Intersection",
+      "endNodeId": "Blue-Target-Bottom",
+      "speedLimit": 50.0,
+      "path": [
+        {
+          "x": 112.5,
+          "y": 62.5
+        },
+        {
+          "x": 112.5,
+          "y": 118.75
+        }
+      ]
+    }
+  ]
+}

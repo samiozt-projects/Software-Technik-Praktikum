@@ -1,0 +1,114 @@
+{
+    "name": "Welt_oben_links",
+    "number": -1,
+    "adhesionCoefficientModifier": 1.0,
+    "weatherCondition": "dry",
+    "challengeConnectionNodeLimit": 2147483647,
+    "vehicleTypes": [
+        {
+            "name": "Auto",
+            "maxSpeed": 80.0,
+            "length": 4.0,
+            "adhesionCoefficient": 0.7,
+            "acceleration": 3.0,
+            "graphicRef": "images/car.png"
+        },
+        {
+            "name": "Lastwagen",
+            "maxSpeed": 60.0,
+            "length": 12.0,
+            "adhesionCoefficient": 0.7,
+            "acceleration": 1.5,
+            "graphicRef": "images/truck.png"
+        },
+        {
+            "name": "Motorrad",
+            "maxSpeed": 100.0,
+            "length": 2.0,
+            "adhesionCoefficient": 0.8,
+            "acceleration": 4.5,
+            "graphicRef": "images/motorcycle.png"
+        }
+    ],
+    "colors": [
+        {
+            "name": "Rot",
+            "argb": 4294901760
+        },
+        {
+            "name": "Blau",
+            "argb": 4278190335
+        },
+        {
+            "name": "Grün",
+            "argb": 4278222848
+        },
+        {
+            "name": "Gelb",
+            "argb": 4294952960
+        },
+        {
+            "name": "Schwarz",
+            "argb": 4278190080
+        },
+        {
+            "name": "Gruen",
+            "argb": 4278241280
+        }
+    ],
+    "nodes": [
+        {
+            "type": "SourceNode",
+            "id": "node-1",
+            "x": 2.3333333333333335,
+            "y": 41.67,
+            "elevation": 0,
+            "orientationDegrees": 90.0,
+            "configurations": [
+                {
+                    "colorName": "Rot",
+                    "vehicleTypeName": "Auto",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 55.0,
+                    "vehiclesToSpawn": 7
+                }
+            ]
+        },
+        {
+            "type": "TargetNode",
+            "id": "node-2",
+            "x": 222.66666666666666,
+            "y": 41.67,
+            "elevation": 0,
+            "orientationDegrees": 270.0,
+            "colorName": "Rot"
+        },
+        {
+            "type": "SourceNode",
+            "id": "node-3",
+            "x": 2.3333333333333335,
+            "y": 83.33,
+            "elevation": 0,
+            "orientationDegrees": 90.0,
+            "configurations": [
+                {
+                    "colorName": "Blau",
+                    "vehicleTypeName": "Auto",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 55.0,
+                    "vehiclesToSpawn": 7
+                }
+            ]
+        },
+        {
+            "type": "TargetNode",
+            "id": "node-4",
+            "x": 222.66666666666666,
+            "y": 83.33,
+            "elevation": 0,
+            "orientationDegrees": 270.0,
+            "colorName": "Blau"
+        }
+    ],
+    "streets": []
+}

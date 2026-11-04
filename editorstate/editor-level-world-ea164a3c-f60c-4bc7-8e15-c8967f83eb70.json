@@ -1,0 +1,463 @@
+{
+    "name": "Neue Weltgguuhuh",
+    "number": -1,
+    "adhesionCoefficientModifier": 1.0,
+    "weatherCondition": "dry",
+    "challengeConnectionNodeLimit": 2147483647,
+    "vehicleTypes": [
+        {
+            "name": "Auto",
+            "maxSpeed": 80.0,
+            "length": 4.0,
+            "adhesionCoefficient": 0.7,
+            "acceleration": 3.0,
+            "graphicRef": "images/car.png"
+        },
+        {
+            "name": "Motorrad",
+            "maxSpeed": 100.0,
+            "length": 2.0,
+            "adhesionCoefficient": 0.8,
+            "acceleration": 4.5,
+            "graphicRef": "images/motorcycle.png"
+        },
+        {
+            "name": "Lastwagen",
+            "maxSpeed": 60.0,
+            "length": 12.0,
+            "adhesionCoefficient": 0.7,
+            "acceleration": 1.5,
+            "graphicRef": "images/truck.png"
+        }
+    ],
+    "colors": [
+        {
+            "name": "Rot",
+            "argb": 4294901760
+        },
+        {
+            "name": "Blau",
+            "argb": 4278190335
+        },
+        {
+            "name": "Grün",
+            "argb": 4278222848
+        },
+        {
+            "name": "Gelb",
+            "argb": 4294952960
+        },
+        {
+            "name": "Gruen",
+            "argb": 4278241280
+        },
+        {
+            "name": "Schwarz",
+            "argb": 4278190080
+        }
+    ],
+    "nodes": [
+        {
+            "type": "SourceNode",
+            "id": "node-1",
+            "x": 2.3333333333333335,
+            "y": 41.67,
+            "elevation": 0,
+            "orientationDegrees": 90.0,
+            "configurations": [
+                {
+                    "colorName": "Rot",
+                    "vehicleTypeName": "Auto",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 55.0,
+                    "vehiclesToSpawn": 7
+                }
+            ]
+        },
+        {
+            "type": "TargetNode",
+            "id": "node-2",
+            "x": 222.66666666666666,
+            "y": 41.67,
+            "elevation": 0,
+            "orientationDegrees": 270.0,
+            "colorName": "Rot"
+        },
+        {
+            "type": "SourceNode",
+            "id": "node-3",
+            "x": 2.3333333333333335,
+            "y": 83.33,
+            "elevation": 0,
+            "orientationDegrees": 90.0,
+            "configurations": [
+                {
+                    "colorName": "Blau",
+                    "vehicleTypeName": "Auto",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 55.0,
+                    "vehiclesToSpawn": 7
+                }
+            ]
+        },
+        {
+            "type": "TargetNode",
+            "id": "node-4",
+            "x": 222.66666666666666,
+            "y": 83.33,
+            "elevation": 0,
+            "orientationDegrees": 270.0,
+            "colorName": "Blau"
+        },
+        {
+            "type": "SourceNode",
+            "id": "node-5",
+            "x": 112.5,
+            "y": 2.3333333333333335,
+            "elevation": 0,
+            "orientationDegrees": 180.0,
+            "configurations": [
+                {
+                    "colorName": "Grün",
+                    "vehicleTypeName": "Auto",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 55.0,
+                    "vehiclesToSpawn": 7
+                }
+            ]
+        },
+        {
+            "type": "TargetNode",
+            "id": "node-6",
+            "x": 112.5,
+            "y": 122.66666666666667,
+            "elevation": 0,
+            "orientationDegrees": 0.0,
+            "colorName": "Grün"
+        },
+        {
+            "type": "SourceNode",
+            "id": "node-7",
+            "x": 112.5,
+            "y": 62.5,
+            "elevation": 0,
+            "orientationDegrees": 57.00000000000001,
+            "configurations": [
+                {
+                    "colorName": "Gelb",
+                    "vehicleTypeName": "Auto",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 55.0,
+                    "vehiclesToSpawn": 7
+                }
+            ]
+        },
+        {
+            "type": "SourceNode",
+            "id": "node-8",
+            "x": 36.38888888888889,
+            "y": 93.61111111111111,
+            "elevation": 0,
+            "orientationDegrees": 0.0,
+            "configurations": [
+                {
+                    "colorName": "Rot",
+                    "vehicleTypeName": "Auto",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 80.0,
+                    "vehiclesToSpawn": 7
+                },
+                {
+                    "colorName": "Blau",
+                    "vehicleTypeName": "Auto",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 80.0,
+                    "vehiclesToSpawn": 7
+                },
+                {
+                    "colorName": "Gruen",
+                    "vehicleTypeName": "Auto",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 80.0,
+                    "vehiclesToSpawn": 7
+                },
+                {
+                    "colorName": "Gelb",
+                    "vehicleTypeName": "Auto",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 80.0,
+                    "vehiclesToSpawn": 7
+                },
+                {
+                    "colorName": "Schwarz",
+                    "vehicleTypeName": "Auto",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 80.0,
+                    "vehiclesToSpawn": 7
+                },
+                {
+                    "colorName": "Rot",
+                    "vehicleTypeName": "Motorrad",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 100.0,
+                    "vehiclesToSpawn": 7
+                },
+                {
+                    "colorName": "Blau",
+                    "vehicleTypeName": "Motorrad",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 100.0,
+                    "vehiclesToSpawn": 7
+                },
+                {
+                    "colorName": "Gruen",
+                    "vehicleTypeName": "Motorrad",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 100.0,
+                    "vehiclesToSpawn": 7
+                },
+                {
+                    "colorName": "Gelb",
+                    "vehicleTypeName": "Motorrad",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 100.0,
+                    "vehiclesToSpawn": 7
+                },
+                {
+                    "colorName": "Schwarz",
+                    "vehicleTypeName": "Motorrad",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 100.0,
+                    "vehiclesToSpawn": 7
+                },
+                {
+                    "colorName": "Rot",
+                    "vehicleTypeName": "Lastwagen",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 60.0,
+                    "vehiclesToSpawn": 7
+                },
+                {
+                    "colorName": "Blau",
+                    "vehicleTypeName": "Lastwagen",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 60.0,
+                    "vehiclesToSpawn": 7
+                },
+                {
+                    "colorName": "Gruen",
+                    "vehicleTypeName": "Lastwagen",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 60.0,
+                    "vehiclesToSpawn": 7
+                },
+                {
+                    "colorName": "Gelb",
+                    "vehicleTypeName": "Lastwagen",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 60.0,
+                    "vehiclesToSpawn": 7
+                },
+                {
+                    "colorName": "Schwarz",
+                    "vehicleTypeName": "Lastwagen",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 60.0,
+                    "vehiclesToSpawn": 7
+                }
+            ]
+        },
+        {
+            "type": "SourceNode",
+            "id": "node-9",
+            "x": 52.722222222222214,
+            "y": 94.7777777777778,
+            "elevation": 0,
+            "orientationDegrees": 0.0,
+            "configurations": [
+                {
+                    "colorName": "Schwarz",
+                    "vehicleTypeName": "Auto",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 80.0,
+                    "vehiclesToSpawn": 7
+                },
+                {
+                    "colorName": "Gelb",
+                    "vehicleTypeName": "Auto",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 80.0,
+                    "vehiclesToSpawn": 7
+                },
+                {
+                    "colorName": "Gruen",
+                    "vehicleTypeName": "Auto",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 80.0,
+                    "vehiclesToSpawn": 7
+                },
+                {
+                    "colorName": "Schwarz",
+                    "vehicleTypeName": "Motorrad",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 100.0,
+                    "vehiclesToSpawn": 7
+                },
+                {
+                    "colorName": "Gelb",
+                    "vehicleTypeName": "Motorrad",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 100.0,
+                    "vehiclesToSpawn": 7
+                },
+                {
+                    "colorName": "Gruen",
+                    "vehicleTypeName": "Motorrad",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 100.0,
+                    "vehiclesToSpawn": 7
+                },
+                {
+                    "colorName": "Schwarz",
+                    "vehicleTypeName": "Lastwagen",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 60.0,
+                    "vehiclesToSpawn": 7
+                },
+                {
+                    "colorName": "Gelb",
+                    "vehicleTypeName": "Lastwagen",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 60.0,
+                    "vehiclesToSpawn": 7
+                },
+                {
+                    "colorName": "Gruen",
+                    "vehicleTypeName": "Lastwagen",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 60.0,
+                    "vehiclesToSpawn": 7
+                }
+            ]
+        },
+        {
+            "type": "SourceNode",
+            "id": "node-10",
+            "x": 65.77777777777777,
+            "y": 92.11111111111111,
+            "elevation": 0,
+            "orientationDegrees": 0.0,
+            "configurations": [
+                {
+                    "colorName": "Rot",
+                    "vehicleTypeName": "Auto",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 80.0,
+                    "vehiclesToSpawn": 7
+                },
+                {
+                    "colorName": "Gruen",
+                    "vehicleTypeName": "Auto",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 80.0,
+                    "vehiclesToSpawn": 7
+                },
+                {
+                    "colorName": "Blau",
+                    "vehicleTypeName": "Auto",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 80.0,
+                    "vehiclesToSpawn": 7
+                },
+                {
+                    "colorName": "Rot",
+                    "vehicleTypeName": "Lastwagen",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 60.0,
+                    "vehiclesToSpawn": 7
+                },
+                {
+                    "colorName": "Gruen",
+                    "vehicleTypeName": "Lastwagen",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 60.0,
+                    "vehiclesToSpawn": 7
+                },
+                {
+                    "colorName": "Blau",
+                    "vehicleTypeName": "Lastwagen",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 60.0,
+                    "vehiclesToSpawn": 7
+                },
+                {
+                    "colorName": "Rot",
+                    "vehicleTypeName": "Motorrad",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 100.0,
+                    "vehiclesToSpawn": 7
+                },
+                {
+                    "colorName": "Gruen",
+                    "vehicleTypeName": "Motorrad",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 100.0,
+                    "vehiclesToSpawn": 7
+                },
+                {
+                    "colorName": "Blau",
+                    "vehicleTypeName": "Motorrad",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 100.0,
+                    "vehiclesToSpawn": 7
+                }
+            ]
+        },
+        {
+            "type": "TargetNode",
+            "id": "node-11",
+            "x": 22.0,
+            "y": 37.0,
+            "elevation": 0,
+            "orientationDegrees": 0.0,
+            "colorName": "Rot"
+        },
+        {
+            "type": "TargetNode",
+            "id": "node-12",
+            "x": 34.222222222222236,
+            "y": 36.83333333333334,
+            "elevation": 0,
+            "orientationDegrees": 0.0,
+            "colorName": "Blau"
+        },
+        {
+            "type": "TargetNode",
+            "id": "node-13",
+            "x": 47.5,
+            "y": 38.88888888888889,
+            "elevation": 0,
+            "orientationDegrees": 0.0,
+            "colorName": "Gruen"
+        },
+        {
+            "type": "TargetNode",
+            "id": "node-14",
+            "x": 59.5,
+            "y": 39.0,
+            "elevation": 0,
+            "orientationDegrees": 0.0,
+            "colorName": "Gelb"
+        },
+        {
+            "type": "TargetNode",
+            "id": "node-15",
+            "x": 71.94444444444444,
+            "y": 39.16666666666667,
+            "elevation": 0,
+            "orientationDegrees": 0.0,
+            "colorName": "Schwarz"
+        }
+    ],
+    "streets": []
+}

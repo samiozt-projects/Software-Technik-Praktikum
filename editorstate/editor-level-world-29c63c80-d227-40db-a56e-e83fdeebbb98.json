@@ -1,0 +1,199 @@
+{
+    "name": "Testwelt Server",
+    "number": -1,
+    "adhesionCoefficientModifier": 1.0,
+    "weatherCondition": "dry",
+    "challengeConnectionNodeLimit": 2147483647,
+    "vehicleTypes": [
+        {
+            "name": "Auto",
+            "maxSpeed": 80.0,
+            "length": 4.0,
+            "adhesionCoefficient": 0.7,
+            "acceleration": 3.0,
+            "graphicRef": "images/car.png"
+        }
+    ],
+    "colors": [
+        {
+            "name": "Rot",
+            "argb": 4294901760
+        },
+        {
+            "name": "Blau",
+            "argb": 4278190335
+        },
+        {
+            "name": "Gruen",
+            "argb": 4278241280
+        },
+        {
+            "name": "Gelb",
+            "argb": 4294952960
+        }
+    ],
+    "nodes": [
+        {
+            "type": "SourceNode",
+            "id": "node-1",
+            "x": 2.3333333333333335,
+            "y": 47.496050769871,
+            "elevation": 0,
+            "orientationDegrees": 90.0,
+            "configurations": [
+                {
+                    "colorName": "Rot",
+                    "vehicleTypeName": "Auto",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 55.0,
+                    "vehiclesToSpawn": 7
+                }
+            ]
+        },
+        {
+            "type": "TargetNode",
+            "id": "node-2",
+            "x": 222.66666666666666,
+            "y": 50.61714939658761,
+            "elevation": 0,
+            "orientationDegrees": 270.0,
+            "colorName": "Rot"
+        },
+        {
+            "type": "SourceNode",
+            "id": "node-3",
+            "x": 2.3333333333333335,
+            "y": 83.33,
+            "elevation": 0,
+            "orientationDegrees": 90.0,
+            "configurations": [
+                {
+                    "colorName": "Blau",
+                    "vehicleTypeName": "Auto",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 55.0,
+                    "vehiclesToSpawn": 7
+                }
+            ]
+        },
+        {
+            "type": "TargetNode",
+            "id": "node-4",
+            "x": 222.66666666666666,
+            "y": 85.41073241781106,
+            "elevation": 0,
+            "orientationDegrees": 270.0,
+            "colorName": "Blau"
+        },
+        {
+            "type": "SourceNode",
+            "id": "node-5",
+            "x": 2.3333333333333335,
+            "y": 31.87973366625049,
+            "elevation": 0,
+            "orientationDegrees": 90.0,
+            "configurations": [
+                {
+                    "colorName": "Gruen",
+                    "vehicleTypeName": "Auto",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 55.0,
+                    "vehiclesToSpawn": 7
+                }
+            ]
+        },
+        {
+            "type": "TargetNode",
+            "id": "node-6",
+            "x": 222.66666666666666,
+            "y": 32.15480649188515,
+            "elevation": 0,
+            "orientationDegrees": 270.0,
+            "colorName": "Gruen"
+        },
+        {
+            "type": "SourceNode",
+            "id": "node-7",
+            "x": 2.541406575114422,
+            "y": 64.99687890137331,
+            "elevation": 0,
+            "orientationDegrees": 90.0,
+            "configurations": [
+                {
+                    "colorName": "Gelb",
+                    "vehicleTypeName": "Auto",
+                    "generationSpeed": 2.0,
+                    "initialVehicleSpeed": 55.0,
+                    "vehiclesToSpawn": 7
+                }
+            ]
+        },
+        {
+            "type": "TargetNode",
+            "id": "node-8",
+            "x": 222.04244694132336,
+            "y": 68.53412401165211,
+            "elevation": 0,
+            "orientationDegrees": 270.0,
+            "colorName": "Gelb"
+        }
+    ],
+    "streets": [
+        {
+            "startNodeId": "node-1",
+            "endNodeId": "node-2",
+            "path": [
+                {
+                    "x": 2.3333333333333335,
+                    "y": 47.496050769871
+                },
+                {
+                    "x": 222.66666666666666,
+                    "y": 50.61714939658761
+                }
+            ]
+        },
+        {
+            "startNodeId": "node-3",
+            "endNodeId": "node-4",
+            "path": [
+                {
+                    "x": 2.3333333333333335,
+                    "y": 83.33
+                },
+                {
+                    "x": 222.66666666666666,
+                    "y": 85.41073241781106
+                }
+            ]
+        },
+        {
+            "startNodeId": "node-5",
+            "endNodeId": "node-6",
+            "path": [
+                {
+                    "x": 2.3333333333333335,
+                    "y": 31.87973366625049
+                },
+                {
+                    "x": 222.66666666666666,
+                    "y": 32.15480649188515
+                }
+            ]
+        },
+        {
+            "startNodeId": "node-7",
+            "endNodeId": "node-8",
+            "path": [
+                {
+                    "x": 2.541406575114422,
+                    "y": 64.99687890137331
+                },
+                {
+                    "x": 222.04244694132336,
+                    "y": 68.53412401165211
+                }
+            ]
+        }
+    ]
+}
